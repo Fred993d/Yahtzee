@@ -17,7 +17,7 @@ int Dice2 = 2;
 int Dice3 = 3;
 int Dice4 = 4;
 int Dice5 = 5;
-int Dice6 = 6;
+
 
 
 //føste linje
