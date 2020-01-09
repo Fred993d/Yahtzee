@@ -18,7 +18,7 @@ int Dice3 = 3;
 int Dice4 = 4;
 int Dice5 = 5;
 
-
+//walla
 
 //føste linje
 int x1 = 1000;
