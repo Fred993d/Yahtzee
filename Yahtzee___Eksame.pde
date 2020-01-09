@@ -1,7 +1,7 @@
 
 
 
-// button 
+// button
 
 // rect(100, 700, 300, 75);
 int b1 = 100;
@@ -12,15 +12,15 @@ int b4 = 75;
 // dice
 
 
-int Dice1 = 1; 
-int Dice2 = 2; 
-int Dice3 = 3; 
-int Dice4 = 4; 
-int Dice5 = 5; 
-int Dice6 = 6; 
+int Dice1 = 1;
+int Dice2 = 2;
+int Dice3 = 3;
+int Dice4 = 4;
+int Dice5 = 5;
+int Dice6 = 6;
 
 
-//føste linje 
+//føste linje
 int x1 = 1000;
 int y1 = 50;
 int w1 = 50;
@@ -83,25 +83,25 @@ int h9 = 50;
 
 void setup() {
   size(1200,950);
-  
+
 }
 
 
 
 void draw() {
-  
 
-  
-  
+
+
+
   fill(255);
-  
-  
-  
-  
+
+
+
+
  //Buttons
- 
+
  rect(100, 700, 300, 75);
-  
+
 //rect(x.y,width,height);
 
 //tom/you/opponet
@@ -129,7 +129,7 @@ rect(900, 250, 100, 50);
 rect(1000, 250, 50, 50);
 rect(1050, 250, 50, 50);
 
-//Fives 
+//Fives
 rect(900, 300, 100, 50);
 rect(1000, 300, 50, 50);
 rect(1050, 300, 50, 50);
@@ -153,12 +153,12 @@ rect(900,  450, 100, 50);
 rect(1000, 450, 50, 50);
 rect(1050, 450, 50, 50);
 
-// Three of a kind 
+// Three of a kind
 rect(900,  500, 100, 50);
 rect(1000, 500, 50, 50);
 rect(1050, 500, 50, 50);
 
-// Four of a kind 
+// Four of a kind
 
 rect(900,  550, 100, 50);
 rect(1000, 550, 50, 50);
@@ -181,7 +181,7 @@ rect(1050, 700, 50, 50);
 
 
 
-// Chance 
+// Chance
 rect(900,  750, 100, 50);
 rect(1000, 750, 50, 50);
 rect(1050, 750, 50, 50);
@@ -201,13 +201,13 @@ rect(900,  850, 100, 50);
 rect(1000, 850, 50, 50);
 rect(1050, 850, 50, 50);
 
-  
+
 
   fill(0);
   textSize(10);
-  text("You", 1015, 80); 
-  text("Bill", 1065,80); 
-  text("Ones", 910, 130); 
+  text("You", 1015, 80);
+  text("Bill", 1065,80);
+  text("Ones", 910, 130);
 
 
 
@@ -230,28 +230,28 @@ text("TOTAL SCORE", 910,880);
 //rect(100x, 700y, 300w, 75h);
 
   textSize(30);
-  text("Roll Dice", 190, 750); 
+  text("Roll Dice", 190, 750);
 
-  text(Dice1, 115, 850); 
-  text(Dice2, 165, 850); 
-  text(Dice3, 215, 850); 
-  text(Dice4, 265, 850); 
-  text(Dice5, 315, 850); 
-  text(Dice6, 365, 850); 
-  
+  text(Dice1, 115, 850);
+  text(Dice2, 165, 850);
+  text(Dice3, 215, 850);
+  text(Dice4, 265, 850);
+  text(Dice5, 315, 850);
+  text(Dice6, 365, 850);
+
 
 
  //de øverester
  if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
-    
-    fill (255,0,0); 
+
+    fill (255,0,0);
     rect(1000, 50, 50, 50);
-   
-    
-    
+
+
+
  }
- 
- /* 
+
+ /*
 int x1 = 1000;
 int y1 = 50;
 int w1 = 50;
@@ -264,83 +264,82 @@ int b4 = 75;
 
 */
  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
-    
-    fill (255,0,0); 
-    rect(100, 700, 300, 75);
-    
 
- 
+    fill (255,0,0);
+    rect(100, 700, 300, 75);
+
+
+
 if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
-    
-    
-    fill (255,0,0); 
+
+
+    fill (255,0,0);
     rect (1000,50,50,50);
 
-    
+
 }
  if ((mouseX>x3 && mouseX <x3+w3 && mouseY>y3 && mouseY <y3+h3)){
-    
-    fill (255,0,0); 
+
+    fill (255,0,0);
     rect (1050,50,50,50);
 
  }
-    
+
     //andne række
-    
+
      if ((mouseX>x4 && mouseX <x4+w4 && mouseY>y4 && mouseY <y4+h4)){
-    
-    fill (255,0,0); 
+
+    fill (255,0,0);
     rect(950, 250, 50, 50);
-    
-    
+
+
  }
 if ((mouseX>x5 && mouseX <x5+w5 && mouseY>y5 && mouseY <y5+h5)){
-    
-    
-    fill (255,0,0); 
+
+
+    fill (255,0,0);
     rect (1000,250,50,50);
 
-    
+
 }
  if ((mouseX>x6 && mouseX <x6+w6 && mouseY>y6 && mouseY <y6+h6)){
-    
-    fill (255,0,0); 
+
+    fill (255,0,0);
     rect (1050,250,50,50);
 
  }
-    
-    
-    
-    
+
+
+
+
       // tjrene række
-    
+
      if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
-    
-    fill (255,0,0); 
+
+    fill (255,0,0);
     rect(950, 300, 50, 50);
-    
-    
+
+
  }
 if ((mouseX>x8 && mouseX <x8+w8 && mouseY>y8 && mouseY <y8+h8)){
-    
-    
-    fill (255,0,0); 
+
+
+    fill (255,0,0);
     rect (1000,300,50,50);
 
-    
+
 }
  if ((mouseX>x9 && mouseX <x9+w9 && mouseY>y9 && mouseY <y9+h9)){
-    
-    fill (255,0,0); 
+
+    fill (255,0,0);
     rect (1050,300,50,50);
 
  }}
-    
-    
-   
-    
-    
- 
+
+
+
+
+
+
 
 }
-      
