@@ -121,7 +121,7 @@ void setup() {
 
 void draw() {
 
-
+background(255,255,255);
 
 
   fill(255);
@@ -306,10 +306,13 @@ void mouseClicked() {
   //button
   
   if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
+  
 
-    fill (255,0,0);
+    Dice1 = Dice1 =2;
+    
+    /*fill (255,0,0);
     rect(100, 700, 300, 75);
-
+*/
 }
   
   
