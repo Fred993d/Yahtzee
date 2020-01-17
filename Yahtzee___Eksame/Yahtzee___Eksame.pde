@@ -2,6 +2,7 @@
 
 
 // button
+// walla
 
 // rect(100, 700, 300, 75);
 int b1 = 100;
@@ -233,7 +234,7 @@ text("TOTAL SCORE", 910,880);
   text(Dice3, 215, 850);
   text(Dice4, 265, 850);
   text(Dice5, 315, 850);
-  text(Dice6, 365, 850);
+ 
 
 
 
