@@ -19,9 +19,12 @@ int Dice3 = 3;
 int Dice4 = 4;
 int Dice5 = 5;
 
-// dice Roll
+// dice 2
 int DiceRoll;
 int DiceHold;
+int DiceSides = 6;
+int DiceTotal = 5;
+int[] rolls = new int[DiceTotal];
 
 //walla
 
@@ -83,7 +86,11 @@ int y9 = 300;
 int w9 = 50;
 int h9 = 50;
 
-
+void DiceRoll() {
+  for (int i=0; i < DiceTotal; i++) {
+    rolls[i]=1 + int(random(DiceSides));
+    }
+}
 
 
 void setup() {
@@ -94,7 +101,7 @@ void setup() {
 
 
 void draw() {
-
+print(DiceRoll);
 
 
 
@@ -268,8 +275,8 @@ int b4 = 75;
 
 */
 
-//buttoen 
- 
+//buttoen
+
 
 
 
@@ -280,8 +287,8 @@ int b4 = 75;
 
 
 void mouseClicked() {
-  
-  
+
+
  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
 
@@ -289,7 +296,7 @@ void mouseClicked() {
    rect(1000, 100, 50, 50);
  }
 
-  
+
    if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
      fill (255,0,0);
      rect(1000,100,50,50);

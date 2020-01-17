@@ -20,6 +20,8 @@ public class Yahtzee___Eksame extends PApplet {
 // button
 // walla
 
+
+
 // rect(100, 700, 300, 75);
 int b1 = 100;
 int b2 = 700;
@@ -33,22 +35,25 @@ int Dice3 = 3;
 int Dice4 = 4;
 int Dice5 = 5;
 
-// dice Roll
+// dice 2
 int DiceRoll;
 int DiceHold;
+int DiceSides = 6;
+int DiceTotal = 5;
+int[] rolls = new int[DiceTotal];
 
 //walla
 
 //føste linje
 int x1 = 1000;
-int y1 = 50;
+int y1 = 100;
 int w1 = 50;
 int h1 = 50;
 
 
 
-int x2 = 1050;
-int y2 = 500;
+int x2 = 1000;
+int y2 = 100;
 int w2 = 50;
 int h2 = 50;
 
@@ -97,7 +102,11 @@ int y9 = 300;
 int w9 = 50;
 int h9 = 50;
 
-
+public void DiceRoll() {
+  for (int i=0; i < DiceTotal; i++) {
+    rolls[i]=1 + PApplet.parseInt(random(DiceSides));
+    }
+}
 
 
 public void setup() {
@@ -108,7 +117,7 @@ public void setup() {
 
 
 public void draw() {
-
+print(DiceRoll);
 
 
 
@@ -257,10 +266,13 @@ text("TOTAL SCORE", 910,880);
 
 
  //de øverste
- if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
+//button
+if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
     fill (255,0,0);
-    rect(1000, 50, 50, 50);
+    rect(100, 700, 300, 75);
+
+}
 
 
 
@@ -278,10 +290,35 @@ int b3 = 300;
 int b4 = 75;
 
 */
+
+//buttoen
+
+
+
+
+
+
+
+
+
+
+public void mouseClicked() {
+
+
  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
+
     fill (255,0,0);
-    rect(100, 700, 300, 75);
+   rect(1000, 100, 50, 50);
+ }
+
+
+   if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
+     fill (255,0,0);
+     rect(1000,100,50,50);
+   }
+
+
 
 
 
@@ -289,10 +326,12 @@ if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
 
     fill (255,0,0);
-    rect (1000,50,50,50);
+    rect (1000,150,50,50);
+
 
 
 }
+
  if ((mouseX>x3 && mouseX <x3+w3 && mouseY>y3 && mouseY <y3+h3)){
 
     fill (255,0,0);
@@ -350,14 +389,6 @@ if ((mouseX>x8 && mouseX <x8+w8 && mouseY>y8 && mouseY <y8+h8)){
     rect (1050,300,50,50);
 
  }}
-
-
-
-
-
-
-
-}
   public void settings() {  size(1200,950); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--stop-color=#cccccc", "Yahtzee___Eksame" };
