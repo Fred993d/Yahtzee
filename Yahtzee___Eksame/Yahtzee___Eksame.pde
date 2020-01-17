@@ -26,6 +26,7 @@ int DiceSides = 6;
 int DiceTotal = 5;
 int[] rolls = new int[DiceTotal];
 
+
 //walla
 
 //føste linje
@@ -86,12 +87,27 @@ int y9 = 300;
 int w9 = 50;
 int h9 = 50;
 
+/*
 void DiceRoll() {
   for (int i=0; i < DiceTotal; i++) {
     rolls[i]=1 + int(random(DiceSides));
     }
 }
 
+void showDiceRoll(){
+for ( int d = 0; d < DiceTotal; d++) {
+  drawDie( d, rolls[d] );
+ }
+}
+
+int[] freqCount(int[] roll) {
+  int[] freqs= new int [DiceSides];
+  for (int i=0; i<roll.length; i++) {
+    freqs[roll[i]-1]+=1; //tæller alle rolls
+  }
+  return freqs;
+}
+*/
 
 void setup() {
   size(1200,950);

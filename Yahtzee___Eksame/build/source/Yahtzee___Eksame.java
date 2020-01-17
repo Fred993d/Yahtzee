@@ -41,6 +41,7 @@ int DiceHold;
 int DiceSides = 6;
 int DiceTotal = 5;
 int[] rolls = new int[DiceTotal];
+int drawDie;
 
 //walla
 
@@ -108,6 +109,19 @@ public void DiceRoll() {
     }
 }
 
+public void showDiceRoll(){
+for ( int d = 0; d < DiceTotal; d++) {
+  drawDie( d, rolls[d] );
+ }
+}
+
+public int[] freqCount(int[] roll) {
+  int[] freqs= new int [DiceSides];
+  for (int i=0; i<roll.length; i++) {
+    freqs[roll[i]-1]+=1; //tæller alle rolls
+  }
+  return freqs;
+}
 
 public void setup() {
   
