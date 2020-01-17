@@ -4,13 +4,13 @@
 // button
 // walla
 
-
-
+//rect(100, 700, 300, 75);
+//rect(x.y,width,height);
 // rect(100, 700, 300, 75);
 int b1 = 100;
 int b2 = 700;
-int b3 = 300;
-int b4 = 75;
+int b3 = 75;
+int b4 = 300;
 
 // dice
 int Dice1 = 1;
@@ -34,11 +34,11 @@ int h1 = 50;
 
 
 int x2 = 1000;
-int y2 = 100;
+int y2 = 150;
 int w2 = 50;
 int h2 = 50;
 
-int x3 = 1100;
+int x3 = 1000;
 int y3 = 200;
 int w3 = 50;
 int h3 = 50;
@@ -46,7 +46,7 @@ int h3 = 50;
 
 //anden inje
 
-int x4 = 950;
+int x4 = 1000;
 int y4 = 250;
 int w4 = 50;
 int h4 = 50;
@@ -54,12 +54,12 @@ int h4 = 50;
 
 
 int x5 = 1000;
-int y5 = 250;
+int y5 = 300;
 int w5 = 50;
 int h5 = 50;
 
-int x6 = 1050;
-int y6 = 250;
+int x6 = 1000;
+int y6 = 350;
 int w6 = 50;
 int h6 = 50;
 
@@ -128,6 +128,8 @@ rect(1050, 150, 50, 50);
 rect(900, 200, 100, 50);
 rect(1000, 200, 50, 50);
 rect(1050, 200, 50, 50);
+
+
 
 // Fours
 rect(900, 250, 100, 50);
@@ -244,12 +246,7 @@ text("TOTAL SCORE", 910,880);
 
  //de øverste
 //button
-if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
-    fill (255,0,0);
-    rect(100, 700, 300, 75);
-
-}
 
 
 
@@ -280,16 +277,20 @@ int b4 = 75;
 
 
 void mouseClicked() {
+  //button
   
-  
- if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
-
+  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
     fill (255,0,0);
-   rect(1000, 100, 50, 50);
- }
+    rect(100, 700, 300, 75);
 
+}
   
+  
+ 
+ 
+
+  // Ones
    if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
      fill (255,0,0);
      rect(1000,100,50,50);
@@ -298,7 +299,7 @@ void mouseClicked() {
 
 
 
-
+// tows
 if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
 
@@ -308,50 +309,32 @@ if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
 
 }
+//Threes
+
 
  if ((mouseX>x3 && mouseX <x3+w3 && mouseY>y3 && mouseY <y3+h3)){
 
     fill (255,0,0);
-    rect (1050,50,50,50);
+    rect (1000,200,50,50);
 
  }
+ 
+ 
+ 
+ 
 
-    //anden række
+    // four
 
      if ((mouseX>x4 && mouseX <x4+w4 && mouseY>y4 && mouseY <y4+h4)){
 
     fill (255,0,0);
-    rect(950, 250, 50, 50);
+    rect(1000, 250, 50, 50);
 
 
  }
-if ((mouseX>x5 && mouseX <x5+w5 && mouseY>y5 && mouseY <y5+h5)){
-
-
-    fill (255,0,0);
-    rect (1000,250,50,50);
-
-
-}
- if ((mouseX>x6 && mouseX <x6+w6 && mouseY>y6 && mouseY <y6+h6)){
-
-    fill (255,0,0);
-    rect (1050,250,50,50);
-
- }
-
-
-
-
-      // tredje række
-
-     if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
-
-    fill (255,0,0);
-    rect(950, 300, 50, 50);
-
-
- }
+ 
+ 
+ //fith
 if ((mouseX>x8 && mouseX <x8+w8 && mouseY>y8 && mouseY <y8+h8)){
 
 
@@ -360,9 +343,28 @@ if ((mouseX>x8 && mouseX <x8+w8 && mouseY>y8 && mouseY <y8+h8)){
 
 
 }
- if ((mouseX>x9 && mouseX <x9+w9 && mouseY>y9 && mouseY <y9+h9)){
+
+//sixes
+ if ((mouseX>x6 && mouseX <x6+w6 && mouseY>y6 && mouseY <y6+h6)){
 
     fill (255,0,0);
-    rect (1050,300,50,50);
+    rect (1000,350,50,50);
 
- }}
+ }
+
+
+
+
+      
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ }
