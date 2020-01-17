@@ -18,6 +18,7 @@ public class Yahtzee___Eksame extends PApplet {
 
 
 // button
+// walla
 
 // rect(100, 700, 300, 75);
 int b1 = 100;
@@ -26,15 +27,17 @@ int b3 = 300;
 int b4 = 75;
 
 // dice
-
-
 int Dice1 = 1;
 int Dice2 = 2;
 int Dice3 = 3;
 int Dice4 = 4;
 int Dice5 = 5;
-int Dice6 = 6;
 
+// dice Roll
+int DiceRoll;
+int DiceHold;
+
+//walla
 
 //føste linje
 int x1 = 1000;
@@ -75,7 +78,7 @@ int w6 = 50;
 int h6 = 50;
 
 
-//tjreje linje
+//tredje linje
 
 int x7 = 950;
 int y7 = 300;
@@ -120,7 +123,7 @@ public void draw() {
 
 //rect(x.y,width,height);
 
-//tom/you/opponet
+//tom/you/opponent
 rect(900, 50, 100, 50);
 rect(1000, 50, 50, 50);
 rect(1050, 50, 50, 50);
@@ -135,7 +138,7 @@ rect(900, 150, 100, 50);
 rect(1000, 150, 50, 50);
 rect(1050, 150, 50, 50);
 
-//Threees
+//Threes
 rect(900, 200, 100, 50);
 rect(1000, 200, 50, 50);
 rect(1050, 200, 50, 50);
@@ -151,7 +154,6 @@ rect(1000, 300, 50, 50);
 rect(1050, 300, 50, 50);
 
 //Sixes
-
 rect(900, 350, 100, 50);
 rect(1000, 350, 50, 50);
 rect(1050, 350, 50, 50);
@@ -164,7 +166,6 @@ rect(1050, 400, 50, 50);
 
 
 // Bonus
-
 rect(900,  450, 100, 50);
 rect(1000, 450, 50, 50);
 rect(1050, 450, 50, 50);
@@ -175,12 +176,11 @@ rect(1000, 500, 50, 50);
 rect(1050, 500, 50, 50);
 
 // Four of a kind
-
 rect(900,  550, 100, 50);
 rect(1000, 550, 50, 50);
 rect(1050, 550, 50, 50);
 
-// Full Haouse
+// Full House
 rect(900,  600, 100, 50);
 rect(1000, 600, 50, 50);
 rect(1050, 600, 50, 50);
@@ -212,7 +212,6 @@ rect(1050, 800, 50, 50);
 
 
 // Total Score
-
 rect(900,  850, 100, 50);
 rect(1000, 850, 50, 50);
 rect(1050, 850, 50, 50);
@@ -253,11 +252,11 @@ text("TOTAL SCORE", 910,880);
   text(Dice3, 215, 850);
   text(Dice4, 265, 850);
   text(Dice5, 315, 850);
-  text(Dice6, 365, 850);
 
 
 
- //de øverester
+
+ //de øverste
  if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
 
     fill (255,0,0);
@@ -301,7 +300,7 @@ if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
  }
 
-    //andne række
+    //anden række
 
      if ((mouseX>x4 && mouseX <x4+w4 && mouseY>y4 && mouseY <y4+h4)){
 
@@ -328,7 +327,7 @@ if ((mouseX>x5 && mouseX <x5+w5 && mouseY>y5 && mouseY <y5+h5)){
 
 
 
-      // tjrene række
+      // tredje række
 
      if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
 

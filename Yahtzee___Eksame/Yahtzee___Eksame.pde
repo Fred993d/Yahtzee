@@ -2,6 +2,7 @@
 
 
 // button
+// walla
 
 
 // rect(100, 700, 300, 75);
@@ -11,15 +12,17 @@ int b3 = 300;
 int b4 = 75;
 
 // dice
-
-
 int Dice1 = 1;
 int Dice2 = 2;
 int Dice3 = 3;
 int Dice4 = 4;
 int Dice5 = 5;
 
+// dice Roll
+int DiceRoll;
+int DiceHold;
 
+//walla
 
 //føste linje
 int x1 = 1000;
@@ -234,7 +237,7 @@ text("TOTAL SCORE", 910,880);
   text(Dice3, 215, 850);
   text(Dice4, 265, 850);
   text(Dice5, 315, 850);
- 
+
 
 
 
@@ -260,7 +263,7 @@ int b3 = 300;
 int b4 = 75;
 
 */
-//buttoen 
+//buttoen
  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
     fill (255,0,0);
