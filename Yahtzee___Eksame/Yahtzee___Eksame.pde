@@ -4,6 +4,7 @@
 // button
 
 
+
 // rect(100, 700, 300, 75);
 int b1 = 100;
 int b2 = 700;
@@ -239,10 +240,7 @@ text("TOTAL SCORE", 910,880);
 
 
  //de øverste
- if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
 
-    fill (255,0,0);
-   rect(1000, 100, 50, 50);
 
 
 
@@ -261,18 +259,38 @@ int b4 = 75;
 
 */
 //buttoen 
- if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
+ 
+
+
+
+
+
+
+
+
+
+void mouseClicked() {
+  
+  
+  
+   if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
+
+    fill (255,0,0);
+   rect(1000, 100, 50, 50);
+
+//button
+if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
     fill (255,0,0);
     rect(1000, 700, 300, 75);
 
-
+}
 
 if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
 
-    fill (2,0,0);
-    rect (1000,100,50,50);
+    fill (255,0,0);
+    rect (1000,150,50,50);
 
 /*
 int x2 = 1000;
@@ -281,8 +299,8 @@ int w2 = 50;
 int h2 = 50;
 */
 
-
 }
+
  if ((mouseX>x3 && mouseX <x3+w3 && mouseY>y3 && mouseY <y3+h3)){
 
     fill (255,0,0);
@@ -340,10 +358,6 @@ if ((mouseX>x8 && mouseX <x8+w8 && mouseY>y8 && mouseY <y8+h8)){
     rect (1050,300,50,50);
 
  }}
-
-
-
-
 
 
 
