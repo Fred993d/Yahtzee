@@ -3,6 +3,7 @@
 
 
 
+
 // button
 // walla
 
@@ -24,6 +25,7 @@ int Dice5 = 5;
 // dice Roll
 int DiceRoll;
 int DiceHold;
+int Sum = Dice1+Dice2+Dice3+Dice3+Dice4+Dice5;
 
 //walla
 
@@ -276,12 +278,10 @@ text("TOTAL SCORE", 910,880);
 //button
 
 
- if (Dice1 == 1){
-   
-   
-  fill(255,0,0);
+ if (Sum >= 0){ 
+     fill(255,0,0);
    textSize(24);
-  text(Dice1,1010,130);
+  text(Sum,1010,780);
 
   
 }
@@ -323,6 +323,8 @@ void mouseClicked() {
   
 
     Dice1 = Dice1 =1;
+    
+ 
     
     /*fill (255,0,0);
     rect(100, 700, 300, 75);
