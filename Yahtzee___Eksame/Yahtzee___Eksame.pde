@@ -23,14 +23,14 @@ int Dice5 = 5;
 
 //føste linje
 int x1 = 1000;
-int y1 = 50;
+int y1 = 100;
 int w1 = 50;
 int h1 = 50;
 
 
 
-int x2 = 1050;
-int y2 = 500;
+int x2 = 1000;
+int y2 = 100;
 int w2 = 50;
 int h2 = 50;
 
@@ -242,7 +242,7 @@ text("TOTAL SCORE", 910,880);
  if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
 
     fill (255,0,0);
-    rect(1000, 50, 50, 50);
+   rect(1000, 100, 50, 50);
 
 
 
@@ -260,18 +260,26 @@ int b3 = 300;
 int b4 = 75;
 
 */
+//buttoen 
  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
     fill (255,0,0);
-    rect(100, 700, 300, 75);
+    rect(1000, 700, 300, 75);
 
 
 
 if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
 
-    fill (255,0,0);
-    rect (1000,50,50,50);
+    fill (2,0,0);
+    rect (1000,100,50,50);
+
+/*
+int x2 = 1000;
+int y2 = 150;
+int w2 = 50;
+int h2 = 50;
+*/
 
 
 }
