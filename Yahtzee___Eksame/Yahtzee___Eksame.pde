@@ -15,7 +15,7 @@ int b3 = 75;
 int b4 = 300;
 
 // dice
-int Dice1 = 1;
+int Dice1 = 5;
 int Dice2 = 2;
 int Dice3 = 3;
 int Dice4 = 4;
@@ -276,6 +276,18 @@ text("TOTAL SCORE", 910,880);
 //button
 
 
+ if (Dice1 == 1){
+   
+   
+  fill(255,0,0);
+   textSize(24);
+  text(Dice1,1010,130);
+
+  
+}
+
+
+
 
 
  }
@@ -310,7 +322,7 @@ void mouseClicked() {
   if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
   
 
-    Dice1 = Dice1 =2;
+    Dice1 = Dice1 =1;
     
     /*fill (255,0,0);
     rect(100, 700, 300, 75);
