@@ -26,6 +26,7 @@ int Dice5 = 5;
 int DiceRoll;
 int DiceHold;
 int Sum = Dice1+Dice2+Dice3+Dice3+Dice4+Dice5;
+int sum1;
 
 //walla
 
@@ -287,6 +288,14 @@ text("TOTAL SCORE", 910,880);
 }
 
 
+if ((Dice1 == 1) || (Dice2 == 1) || (Dice3 ==1) || (Dice4==1) || (Dice5==1))
+{
+ 
+  
+
+  
+}
+
 
 
 
@@ -316,7 +325,7 @@ int b4 = 75;
 
 
 
-void mouseClicked() {
+void mousePressed() {
   //button
   
   if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
