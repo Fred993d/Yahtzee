@@ -234,7 +234,7 @@ text("TOTAL SCORE", 910,880);
   text(Dice3, 215, 850);
   text(Dice4, 265, 850);
   text(Dice5, 315, 850);
- stor penis
+ 
 
 
 
