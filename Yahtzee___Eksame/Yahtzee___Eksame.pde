@@ -1,31 +1,18 @@
 
-
-
 // button
 // walla
-
-
-
 // rect(100, 700, 300, 75);
 int b1 = 100;
 int b2 = 700;
 int b3 = 300;
 int b4 = 75;
 
-// dice
-int Dice1 = 1;
-int Dice2 = 2;
-int Dice3 = 3;
-int Dice4 = 4;
-int Dice5 = 5;
-
 // dice 2
-int DiceRoll;
 int DiceHold;
 int DiceSides = 6;
 int DiceTotal = 5;
 int[] rolls = new int[DiceTotal];
-
+int [] Dice = new int[DiceTotal];
 
 //walla
 
@@ -87,38 +74,21 @@ int y9 = 300;
 int w9 = 50;
 int h9 = 50;
 
-/*
-void DiceRoll() {
-  for (int i=0; i < DiceTotal; i++) {
-    rolls[i]=1 + int(random(DiceSides));
-    }
-}
 
-void showDiceRoll(){
-for ( int d = 0; d < DiceTotal; d++) {
-  drawDie( d, rolls[d] );
- }
-}
 
-int[] freqCount(int[] roll) {
-  int[] freqs= new int [DiceSides];
-  for (int i=0; i<roll.length; i++) {
-    freqs[roll[i]-1]+=1; //tæller alle rolls
-  }
-  return freqs;
-}
-*/
 
 void setup() {
   size(1200,950);
+  for (int i = 0; i < DiceTotal; i++){
+    Dice[i] = i;
 
+  }
 }
 
 
 
 void draw() {
-print(DiceRoll);
-
+  background(255);
 
 
   fill(255);
@@ -256,23 +226,18 @@ text("TOTAL SCORE", 910,880);
   textSize(30);
   text("Roll Dice", 190, 750);
 
-  text(Dice1, 115, 850);
-  text(Dice2, 165, 850);
-  text(Dice3, 215, 850);
-  text(Dice4, 265, 850);
-  text(Dice5, 315, 850);
+  text(Dice[0], 115, 850);
+  text(Dice[1], 165, 850);
+  text(Dice[2], 215, 850);
+  text(Dice[3], 265, 850);
+  text(Dice[4], 315, 850);
 
 
 
 
  //de øverste
 //button
-if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
-    fill (255,0,0);
-    rect(100, 700, 300, 75);
-
-}
 
 
 
@@ -303,7 +268,17 @@ int b4 = 75;
 
 
 void mouseClicked() {
+  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
+      fill (255,0,0);
+      rect(100, 700, 300, 75);
+      DiceRoll();
+      text(Dice[0], 115, 850);
+      text(Dice[1], 165, 850);
+      text(Dice[2], 215, 850);
+      text(Dice[3], 265, 850);
+      text(Dice[4], 315, 850);
+  }
 
  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
 
