@@ -2,6 +2,19 @@
 // Feldbak
 
 
+/*
+notater til næste gang: 
+
+Jeg er nød til at lave et array som indholder alle mine terninger og dens værdiger. 
+Der efter bruger jeg if statems og for løkker til at gennegå dem og se hvad deres værdier er (se det billede som du tog) 
+og når jeg så har fundet ud af hvor mange der er af de forksklige tal, skal jeg bare gange antal med værdien og så lave en sum af dem
+
+
+
+
+
+*/
+
 
 
 // button
@@ -27,6 +40,12 @@ int DiceRoll;
 int DiceHold;
 int Sum = Dice1+Dice2+Dice3+Dice3+Dice4+Dice5;
 int sum1;
+int sum2;
+int sum3;
+int sum4;
+int sum5;
+int sum6;
+
 
 //walla
 
