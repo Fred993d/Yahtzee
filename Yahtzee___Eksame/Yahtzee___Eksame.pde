@@ -50,102 +50,42 @@ int sum6;
 //walla
 
 //føste linje
-int x1 = 1000;
+int x = 1000;
+int w = 50;
+int h = 50;
 int y1 = 100;
-int w1 = 50;
-int h1 = 50;
-
-
-
-int x2 = 1000;
 int y2 = 150;
-int w2 = 50;
-int h2 = 50;
-
-int x3 = 1000;
 int y3 = 200;
-int w3 = 50;
-int h3 = 50;
-
 
 //anden inje
 
-int x4 = 1000;
 int y4 = 250;
-int w4 = 50;
-int h4 = 50;
-
-
-
-int x5 = 1000;
 int y5 = 300;
-int w5 = 50;
-int h5 = 50;
-
-
- 
-
-int x6 = 1000;
 int y6 = 350;
-int w6 = 50;
-int h6 = 50;
-
 
 //tredje linje
 
-int x7 = 1000;
 int y7 = 500;
-int w7 = 50;
-int h7 = 50;
-
-
-
-int x8 = 1000;
 int y8 = 550;
-int w8 = 50;
-int h8 = 50;
-
-int x9 = 1000;
 int y9 = 600;
-int w9 = 50;
-int h9 = 50;
-
-
-
-int x10 = 1000;
 int y10 = 650;
-int w10 = 50;
-int h10 = 50;
-
-
-
-int x11 = 1000;
 int y11 = 700;
-int w11 = 50;
-int h11 = 50;
-
-
-int x12 = 1000;
 int y12 = 750;
-int w12 = 50;
-int h12 = 50;
-
-
-int x13 = 1000;
 int y13 = 800;
-int w13 = 50;
-int h13 = 50;
 
 
-ArrayList Dices;
 
+//ArrayList Dices;
 
+int[] yLængde ={500,550,600,650,700,750,800};
+
+int[] data = { 1,2,3,4,5,6};
 
 
 void setup() {
   size(1200,950);
   
-  Dices = new ArrayList();
+  //Dices = new ArrayList();
 
 }
 
@@ -372,7 +312,7 @@ void mousePressed() {
  
 
   // Ones
-   if ((mouseX>x1 && mouseX <x1+w1 && mouseY>y1 && mouseY <y1+h1)){
+   if ((mouseX>x && mouseX <x+w && mouseY>y1 && mouseY <y1+h)){
      fill (255,0,0);
      rect(1000,100,50,50);
    }
@@ -381,7 +321,7 @@ void mousePressed() {
 
 
 // tows
-if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
+if ((mouseX>x && mouseX <x+w && mouseY>y2 && mouseY <y2+h)){
 
 
     fill (255,0,0);
@@ -393,7 +333,7 @@ if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 //Threes
 
 
- if ((mouseX>x3 && mouseX <x3+w3 && mouseY>y3 && mouseY <y3+h3)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y3 && mouseY <y3+h)){
 
     fill (255,0,0);
     rect (1000,200,50,50);
@@ -406,7 +346,7 @@ if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
 
     // four
 
-     if ((mouseX>x4 && mouseX <x4+w4 && mouseY>y4 && mouseY <y4+h4)){
+     if ((mouseX>x && mouseX <x+w && mouseY>y4 && mouseY <y4+h)){
 
     fill (255,0,0);
     rect(1000, 250, 50, 50);
@@ -416,7 +356,7 @@ if ((mouseX>x2 && mouseX <x2+w2 && mouseY>y2 && mouseY <y2+h2)){
  
  
  //fith
-if ((mouseX>x5 && mouseX <x5+w5 && mouseY>y5 && mouseY <y5+h5)){
+if ((mouseX>x && mouseX <x+w && mouseY>y5 && mouseY <y5+h)){
 
 
     fill (255,0,0);
@@ -426,7 +366,7 @@ if ((mouseX>x5 && mouseX <x5+w5 && mouseY>y5 && mouseY <y5+h5)){
 }
 
 //sixes
- if ((mouseX>x6 && mouseX <x6+w6 && mouseY>y6 && mouseY <y6+h6)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y6 && mouseY <y6+h)){
 
     fill (255,0,0);
     rect (1000,350,50,50);
@@ -435,7 +375,7 @@ if ((mouseX>x5 && mouseX <x5+w5 && mouseY>y5 && mouseY <y5+h5)){
  
  
  // thee of a kind 
-if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
+if ((mouseX>x && mouseX <x+w && mouseY>y7 && mouseY <y7+h)){
 
     fill (255,0,0);
     rect (1000,500,50,50);
@@ -444,7 +384,7 @@ if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
  
  
  //four of a kind 
- if ((mouseX>x8 && mouseX <x8+w8 && mouseY>y8 && mouseY <y8+h8)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y8 && mouseY <y8+h)){
 
     fill (255,0,0);
     rect (1000,550,50,50);
@@ -452,7 +392,7 @@ if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
  }
  
  // Full house
- if ((mouseX>x9 && mouseX <x9+w9 && mouseY>y9 && mouseY <y9+h9)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y9 && mouseY <y9+h)){
 
     fill (255,0,0);
     rect (1000,600,50,50);
@@ -462,7 +402,7 @@ if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
 
 
       // small stragit 
- if ((mouseX>x10 && mouseX <x10+w10 && mouseY>y10 && mouseY <y10+h10)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y10 && mouseY <y10+h)){
 
     fill (255,0,0);
     rect (1000,650,50,50);
@@ -471,7 +411,7 @@ if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
  
  
  // Large stragith 
- if ((mouseX>x11 && mouseX <x11+w11 && mouseY>y11 && mouseY <y11+h11)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y11 && mouseY <y11+h)){
 
     fill (255,0,0);
     rect (1000,700,50,50);
@@ -481,7 +421,7 @@ if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
  
  
  // Chance
- if ((mouseX>x12 && mouseX <x12+w12 && mouseY>y12 && mouseY <y12+h12)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y12 && mouseY <y12+h)){
 
     fill (255,0,0);
     rect (1000,750,50,50);
@@ -489,7 +429,7 @@ if ((mouseX>x7 && mouseX <x7+w7 && mouseY>y7 && mouseY <y7+h7)){
  }
  
  // YAHCCHE !
- if ((mouseX>x13 && mouseX <x13+w13 && mouseY>y13 && mouseY <y13+h13)){
+ if ((mouseX>x && mouseX <x+w && mouseY>y13 && mouseY <y13+h)){
 
     fill (255,0,0);
     rect (1000,800,50,50);
