@@ -136,8 +136,16 @@ int y13 = 800;
 int w13 = 50;
 int h13 = 50;
 
+
+ArrayList Dices;
+
+
+
+
 void setup() {
   size(1200,950);
+  
+  Dices = new ArrayList();
 
 }
 
