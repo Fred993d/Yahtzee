@@ -15,6 +15,18 @@ og når jeg så har fundet ud af hvor mange der er af de forksklige tal, skal je
 
 */
 
+float roll = random(1, 6);   
+float roll2 = random(1, 6);  
+float roll3 = random(1, 6);  
+float roll4 = random(1, 6);  
+float roll5 = random(1, 6);  
+
+int num1 = round(roll);
+int num2 = round(roll2);
+int num3 = round(roll3);
+int num4 = round(roll4);
+int num5 = round(roll5);
+
 
 
 // button
@@ -29,16 +41,21 @@ int b3 = 75;
 int b4 = 300;
 
 // dice
-int Dice1 = 5;
-int Dice2 = 2;
-int Dice3 = 3;
-int Dice4 = 4;
-int Dice5 = 5;
+int Dice1 = num1;
+int Dice2 = num2;
+int Dice3 = num3;
+int Dice4 = num4;
+int Dice5 = num5;
+
+
+
+
+
 
 // dice Roll
 int DiceRoll;
 int DiceHold;
-int Sum = Dice1+Dice2+Dice3+Dice3+Dice4+Dice5;
+int Sum = Dice1+Dice2+Dice3+Dice4+Dice5;
 int sum1;
 int sum2;
 int sum3;
@@ -246,6 +263,11 @@ text("TOTAL SCORE", 910,880);
 //button
 
 
+
+
+
+
+
  if (Sum >= 0){ 
      fill(255,0,0);
    textSize(24);
@@ -298,7 +320,7 @@ void mousePressed() {
   if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
   
 
-    Dice1 = Dice1 =1;
+    
     
  
     
