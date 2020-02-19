@@ -12,24 +12,21 @@ og når jeg så har fundet ud af hvor mange der er af de forksklige tal, skal je
 
 
 
-
-/*
-
-float roll = random(1, 6);   
-float roll2 = random(1, 6);  
-float roll3 = random(1, 6);  
-float roll4 = random(1, 6);  
-float roll5 = random(1, 6);  
-
-int num1 = round(roll);
-int num2 = round(roll2);
-int num3 = round(roll3);
-int num4 = round(roll4);
-int num5 = round(roll5);
-
 */
 
 
+
+int roll = int(random(1, 6));
+int roll2 = int(random(1, 6));
+int roll3 = int(random(1, 6));
+int roll4 = int(random(1, 6));
+int roll5 = int(random(1, 6));
+
+
+
+
+//maxslag skal være mindst 2 før mna kan trykke på nolge af dem. 
+int maxslag = 3;
 
 
 // button
@@ -44,11 +41,11 @@ int b3 = 75;
 int b4 = 300;
 
 // dice
-int Dice1 ;
-int Dice2 ; 
-int Dice3 ;
-int Dice4 ; 
-int Dice5 ; 
+int Dice1 =roll;
+int Dice2 =roll2; 
+int Dice3 = roll3;
+int Dice4 =roll4; 
+int Dice5 =roll5; 
 
 
 
@@ -58,7 +55,7 @@ int Dice5 ;
 // dice Roll
 int DiceRoll;
 int DiceHold;
-int Sum = Dice1+Dice2+Dice3+Dice4+Dice5;
+float Sum = roll+roll2+roll3+roll4+roll5;
 int sum1;
 int sum2;
 int sum3;
@@ -126,6 +123,21 @@ background(255,255,255);
  rect(100, 700, 300, 75);
 
 //rect(x.y,width,height);
+
+/* text(Dice1, 115, 850);
+  text(Dice2, 165, 850);
+  text(Dice3, 215, 850);
+  text(Dice4, 265, 850);
+  text(Dice5, 315, 850);*/
+
+//tal 1 
+
+rect(104,820,40,40);
+rect(154,820,40,40);
+rect(204,820,40,40);
+rect(254,820,40,40);
+rect(304,820,40,40);
+
 
 //tom/you/opponent
 rect(900, 50, 100, 50);
@@ -259,7 +271,7 @@ text("TOTAL SCORE", 910,880);
   text(Dice4, 265, 850);
   text(Dice5, 315, 850);
 
-
+text("Slag tilbage: "+maxslag,50,50);
 
 
  //de øverste
@@ -320,17 +332,45 @@ int b4 = 75;
 void mousePressed() {
   //button
   
-  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3)){
+  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3  && maxslag >0 )){
   
 
-    
-    
+  
+ Dice1 = int( random(1, 7));   
+ Dice2 = int(random(1, 7));  
+ Dice3 = int( random(1, 7));  
+ Dice4 = int(random(1, 7));  
+ Dice5 = int(random(1, 7));  
+
+maxslag =maxslag-1;
  
     
     /*fill (255,0,0);
     rect(100, 700, 300, 75);
 */
 }
+//tal 1 
+
+if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3  && maxslag >0 )){
+  
+
+  
+ Dice1 = int( random(1, 7));   
+ Dice2 = int(random(1, 7));  
+ Dice3 = int( random(1, 7));  
+ Dice4 = int(random(1, 7));  
+ Dice5 = int(random(1, 7));  
+
+maxslag =maxslag-1;
+ 
+    
+    /*fill (255,0,0);
+    rect(100, 700, 300, 75);
+*/
+}
+
+
+
   
   
  
