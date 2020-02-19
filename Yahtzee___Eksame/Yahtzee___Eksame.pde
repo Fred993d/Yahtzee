@@ -13,7 +13,7 @@ og når jeg så har fundet ud af hvor mange der er af de forksklige tal, skal je
 
 
 
-*/
+/*
 
 float roll = random(1, 6);   
 float roll2 = random(1, 6);  
@@ -26,6 +26,9 @@ int num2 = round(roll2);
 int num3 = round(roll3);
 int num4 = round(roll4);
 int num5 = round(roll5);
+
+*/
+
 
 
 
@@ -41,11 +44,11 @@ int b3 = 75;
 int b4 = 300;
 
 // dice
-int Dice1 = num1;
-int Dice2 = num2;
-int Dice3 = num3;
-int Dice4 = num4;
-int Dice5 = num5;
+int Dice1 ;
+int Dice2 ; 
+int Dice3 ;
+int Dice4 ; 
+int Dice5 ; 
 
 
 
