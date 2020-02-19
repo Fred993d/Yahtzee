@@ -185,7 +185,7 @@ rect(900,  650, 100, 50);
 rect(1000, 650, 50, 50);
 rect(1050, 650, 50, 50);
 
-// large staright
+// large Straight
 rect(900,  700, 100, 50);
 rect(1000, 700, 50, 50);
 rect(1050, 700, 50, 50);
@@ -396,6 +396,7 @@ public void DiceRoll() {
   for (int i=0; i < DiceTotal; i++) {
     rolls[i]=1 + PApplet.parseInt(random(DiceSides));
     Dice[i] = rolls[i];
+
     }
 }
 

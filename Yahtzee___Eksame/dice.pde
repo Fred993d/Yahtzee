@@ -23,12 +23,3 @@ for ( int d = 0; d < DiceTotal; d++) {
   drawDice( d, rolls[d] );
  }
 }
-/*
-int[] freqCount(int[] roll) {
-  int[] freqs= new int [DiceSides];
-  for (int i=0; i<roll.length; i++) {
-    freqs[roll[i]-1]+=1; //tæller alle rolls
-  }
-  return freqs;
-}
-  */
