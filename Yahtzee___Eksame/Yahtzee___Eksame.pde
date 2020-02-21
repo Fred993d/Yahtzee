@@ -11,6 +11,9 @@ og når jeg så har fundet ud af hvor mange der er af de forksklige tal, skal je
 
 
 
+Jeg er nød til at lave en boolen for hver state, sådan vi kan tjekke om de er blevet "parkert"
+
+
 
 */
 
@@ -22,11 +25,11 @@ int roll3 = int(random(1, 6));
 int roll4 = int(random(1, 6));
 int roll5 = int(random(1, 6));
 
-
+int ones = 1;
 
 
 //maxslag skal være mindst 2 før mna kan trykke på nolge af dem. 
-int maxslag = 3;
+int maxslag = 100;
 
 
 // button
@@ -55,7 +58,7 @@ int Dice5 =roll5;
 // dice Roll
 int DiceRoll;
 int DiceHold;
-float Sum = roll+roll2+roll3+roll4+roll5;
+float Sum = int(roll+roll2+roll3+roll4+roll5);
 int sum1;
 int sum2;
 int sum3;
@@ -283,19 +286,44 @@ text("Slag tilbage: "+maxslag,50,50);
 
 
 
+//sum
  if (Sum >= 0){ 
      fill(255,0,0);
    textSize(24);
-  text(Sum,1010,780);
+  text(int(Dice1+Dice2+Dice3+Dice4+Dice5),1010,780);
 
   
 }
+
+if(Dice1 ==1){
+
+ones=+1;
+  fill(255,0,0);
+   textSize(24);
+  text(ones,1020,135);
+
+}
+
+
+
+if(Dice2 ==1){
+
+ones=+1;
+  fill(255,0,0);
+   textSize(24);
+  text(ones,1020,135);
+
+}
+
+
 
 
 if ((Dice1 == 1) || (Dice2 == 1) || (Dice3 ==1) || (Dice4==1) || (Dice5==1))
 {
  
-  
+  fill(255,0,0);
+   textSize(24);
+  text(int(Dice1+Dice2+Dice3+Dice4+Dice5),1010,780);
 
   
 }
