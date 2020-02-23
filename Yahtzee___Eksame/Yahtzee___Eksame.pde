@@ -35,7 +35,7 @@ boolean d4 = false;
 boolean d5 = false;
 
 
-
+int Dice1_hold;
 //maxslag skal være mindst 2 før mna kan trykke på nolge af dem. 
 int maxslag = 100;
 
@@ -354,11 +354,19 @@ int b4 = 75;
 void mousePressed() {
   //button
   
-  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3  && maxslag >0 )){
+  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3  && maxslag >0 &&Dice1 ==Dice1_hold )){
   
+Dice2 = int(random(1, 7));  
+ Dice3 = int( random(1, 7));  
+ Dice4 = int(random(1, 7));  
+ Dice5 = int(random(1, 7));  
+  
+ 
 
+  }else
+{
   
- Dice1 = int( random(1, 7));   
+  Dice1 = int( random(1, 7));   
  Dice2 = int(random(1, 7));  
  Dice3 = int( random(1, 7));  
  Dice4 = int(random(1, 7));  
@@ -369,27 +377,15 @@ maxslag =maxslag-1;
     
     /*fill (255,0,0);
     rect(100, 700, 300, 75);
+   
 */
+  
+  
+
 }
 //tal 1 
 
-if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3  && maxslag >0 )){
-  
 
-  
- Dice1 = int( random(1, 7));   
- Dice2 = int(random(1, 7));  
- Dice3 = int( random(1, 7));  
- Dice4 = int(random(1, 7));  
- Dice5 = int(random(1, 7));  
-
-maxslag =maxslag-1;
- 
-    
-    /*fill (255,0,0);
-    rect(100, 700, 300, 75);
-*/
-}
 
 
 
@@ -531,16 +527,23 @@ rect(254,820,40,40);
 rect(304,820,40,40);
 */
  
+ if (d1== true){
+ 
+ Dice1 = Dice1_hold;
+ 
+ print (Dice1_hold);
+ }
  
    
  
  // dice 1 state 
- if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh )){
  
   
    d1 = true;
    print ("true");
 
+ 
  }
  
  
