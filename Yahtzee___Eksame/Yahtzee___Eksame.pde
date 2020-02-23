@@ -28,6 +28,14 @@ int roll5 = int(random(1, 6));
 int ones = 1;
 
 
+boolean d1 = false;
+boolean d2 = false;
+boolean d3 = false;
+boolean d4 = false;
+boolean d5 = false;
+
+
+
 //maxslag skal være mindst 2 før mna kan trykke på nolge af dem. 
 int maxslag = 100;
 
@@ -69,6 +77,25 @@ int sum6;
 
 //walla
 
+/*rect(104,820,40,40);
+rect(154,820,40,40);
+rect(204,820,40,40);
+rect(254,820,40,40);
+rect(304,820,40,40);
+*/
+
+// var til dice state
+
+int DSw =40;
+int DSh =40;
+int DSx = 820;
+int DS_y1 = 104;
+int DS_y2 = 154;
+int DS_y3 = 204;
+int DS_y4 = 254;
+int DS_y5 = 304;
+
+
 //føste linje
 int x = 1000;
 int w = 50;
@@ -76,15 +103,9 @@ int h = 50;
 int y1 = 100;
 int y2 = 150;
 int y3 = 200;
-
-//anden inje
-
 int y4 = 250;
 int y5 = 300;
 int y6 = 350;
-
-//tredje linje
-
 int y7 = 500;
 int y8 = 550;
 int y9 = 600;
@@ -295,38 +316,11 @@ text("Slag tilbage: "+maxslag,50,50);
   
 }
 
-if(Dice1 ==1){
-
-ones=+1;
-  fill(255,0,0);
-   textSize(24);
-  text(ones,1020,135);
-
-}
-
-
-
-if(Dice2 ==1){
-
-ones=+1;
-  fill(255,0,0);
-   textSize(24);
-  text(ones,1020,135);
-
-}
 
 
 
 
-if ((Dice1 == 1) || (Dice2 == 1) || (Dice3 ==1) || (Dice4==1) || (Dice5==1))
-{
- 
-  fill(255,0,0);
-   textSize(24);
-  text(int(Dice1+Dice2+Dice3+Dice4+Dice5),1010,780);
 
-  
-}
 
 
 
@@ -529,9 +523,59 @@ if ((mouseX>x && mouseX <x+w && mouseY>y7 && mouseY <y7+h)){
 
  }
 
+ /*
+rect(104,820,40,40);
+rect(154,820,40,40);
+rect(204,820,40,40);
+rect(254,820,40,40);
+rect(304,820,40,40);
+*/
  
  
+   
  
+ // dice 1 state 
+ if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ 
+  
+   d1 = true;
+   print ("true");
+
+ }
+ 
+ 
+ // dice 2 state 
+ if ((mouseX>DS_y2 && mouseX <DS_y2+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ 
+  
+   d2 = true;
+   print ("true");
+
+ }
+ // dice 3 state 
+ if ((mouseX>DS_y3 && mouseX <DS_y3+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ 
+  
+   d3 = true;
+   print ("true");
+
+ }
+ // dice 4 state 
+ if ((mouseX>DS_y4 && mouseX <DS_y4+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ 
+  
+   d4 = true;
+   print ("true");
+
+ }
+ // dice 5 state 
+ if ((mouseX>DS_y5 && mouseX <DS_y5+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ 
+  
+   d5 = true;
+   print ("true");
+
+ }
  
  
  }
