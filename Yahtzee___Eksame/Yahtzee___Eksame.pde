@@ -35,7 +35,7 @@ boolean d4 = false;
 boolean d5 = false;
 
 
-int Dice1_hold;
+int Dice1_hold =0;
 //maxslag skal være mindst 2 før mna kan trykke på nolge af dem. 
 int maxslag = 100;
 
@@ -43,7 +43,7 @@ int maxslag = 100;
 // button
 // walla
 
-//rect(100, 700, 300, 75);
+
 //rect(x.y,width,height);
 // rect(100, 700, 300, 75);
 int b1 = 100;
@@ -253,6 +253,8 @@ rect(1050, 800, 50, 50);
 
 
 
+
+
 // Total Score
 rect(900,  850, 100, 50);
 rect(1000, 850, 50, 50);
@@ -294,6 +296,7 @@ text("TOTAL SCORE", 910,880);
   text(Dice3, 215, 850);
   text(Dice4, 265, 850);
   text(Dice5, 315, 850);
+  text(Dice1_hold, 315, 650);
 
 text("Slag tilbage: "+maxslag,50,50);
 
@@ -302,7 +305,7 @@ text("Slag tilbage: "+maxslag,50,50);
 //button
 
 
-
+  
 
 
 
@@ -349,49 +352,43 @@ int b4 = 75;
 
 
 
+//rect(100, 700, 300, 75);
 
+//rect(x.y,width,height);
 
 void mousePressed() {
   //button
   
-  if ((mouseX>b1 && mouseX <b1+b4 && mouseY>b2 && mouseY <b2+b3  && maxslag >0 &&Dice1 ==Dice1_hold )){
+  if ((mouseX>100 && mouseX <100+300 && mouseY>700 && mouseY <700+75  && maxslag >0 && d1 ==false)){
+
   
-Dice2 = int(random(1, 7));  
+  Dice1 = int(random(1, 7));  
+  Dice2 = int(random(1, 7));  
  Dice3 = int( random(1, 7));  
  Dice4 = int(random(1, 7));  
  Dice5 = int(random(1, 7));  
   
  
 
-  }else
+  }else if  ((mouseX>100 && mouseX <100+300 && mouseY>700 && mouseY <700+75  && maxslag >0 && d1 ==true))
 {
   
-  Dice1 = int( random(1, 7));   
  Dice2 = int(random(1, 7));  
  Dice3 = int( random(1, 7));  
  Dice4 = int(random(1, 7));  
  Dice5 = int(random(1, 7));  
-
-maxslag =maxslag-1;
  
-    
-    /*fill (255,0,0);
-    rect(100, 700, 300, 75);
-   
-*/
+
+  
+  
+ 
+
   
   
 
 }
 //tal 1 
 
-
-
-
-
-  
-  
- 
  
 
   // Ones
@@ -529,7 +526,7 @@ rect(304,820,40,40);
  
  if (d1== true){
  
- Dice1 = Dice1_hold;
+ Dice1_hold = Dice1;
  
  print (Dice1_hold);
  }
@@ -540,8 +537,12 @@ rect(304,820,40,40);
  if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh )){
  
   
+   
    d1 = true;
    print ("true");
+   
+   
+   
 
  
  }
