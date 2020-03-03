@@ -36,6 +36,12 @@ boolean d5 = false;
 
 
 int Dice1_hold =0;
+int Dice2_hold =0;
+int Dice3_hold =0;
+int Dice4_hold =0;
+int Dice5_hold =0;
+
+
 //maxslag skal være mindst 2 før mna kan trykke på nolge af dem. 
 int maxslag = 100;
 
@@ -368,7 +374,7 @@ void mousePressed() {
  Dice4 = int(random(1, 7));  
  Dice5 = int(random(1, 7));  
   
- 
+ maxslag = maxslag -1;
 
   }else if  ((mouseX>100 && mouseX <100+300 && mouseY>700 && mouseY <700+75  && maxslag >0 && d1 ==true))
 {
@@ -378,7 +384,34 @@ void mousePressed() {
  Dice4 = int(random(1, 7));  
  Dice5 = int(random(1, 7));  
  
+maxslag = maxslag -1;
+  
+  
+ 
 
+  
+  
+
+} else if((mouseX>100 && mouseX <100+300 && mouseY>700 && mouseY <700+75  && maxslag >0 && d2 ==false)){
+
+  
+  Dice1 = int(random(1, 7));  
+  Dice2 = int(random(1, 7));  
+ Dice3 = int( random(1, 7));  
+ Dice4 = int(random(1, 7));  
+ Dice5 = int(random(1, 7));  
+  
+ maxslag = maxslag -1;
+
+  }else if  ((mouseX>100 && mouseX <100+300 && mouseY>700 && mouseY <700+75  && maxslag >0 && d2 ==true))
+{
+  
+ Dice1 = int(random(1, 7));  
+ Dice3 = int( random(1, 7));  
+ Dice4 = int(random(1, 7));  
+ Dice5 = int(random(1, 7));  
+ 
+maxslag = maxslag -1;
   
   
  
@@ -387,6 +420,10 @@ void mousePressed() {
   
 
 }
+
+
+
+
 //tal 1 
 
  
@@ -524,6 +561,7 @@ rect(254,820,40,40);
 rect(304,820,40,40);
 */
  
+ //Dice 1 hold 
  if (d1== true){
  
  Dice1_hold = Dice1;
@@ -531,6 +569,51 @@ rect(304,820,40,40);
  print (Dice1_hold);
  }
  
+ 
+if (d1== false){
+ 
+ Dice1_hold = Dice1;
+ Dice1_hold =0;
+ 
+ print (Dice1_hold);
+ 
+}
+ 
+  //Dice 2 hold 
+ if (d2== true){
+ 
+ Dice2_hold = Dice2;
+ 
+ print (Dice2_hold);
+ }
+ 
+ 
+if (d2== false){
+ 
+ Dice2_hold = Dice2;
+ Dice2_hold =0;
+ 
+ print (Dice2_hold);
+ 
+}
+ 
+  //Dice 3 hold 
+ if (d3== true){
+ 
+ Dice3_hold = Dice3;
+ 
+ print (Dice3_hold);
+ }
+ 
+ 
+if (d3== false){
+ 
+ Dice3_hold = Dice3;
+ Dice3_hold =0;
+ 
+ print (Dice3_hold);
+ 
+ }
    
  
  // dice 1 state 
@@ -550,39 +633,82 @@ rect(304,820,40,40);
    
  }
  
- 
+
+
  // dice 2 state 
- if ((mouseX>DS_y2 && mouseX <DS_y2+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ if ((mouseX>DS_y2 && mouseX <DS_y2+DSw && mouseY>DSx && mouseY <DSx+DSh && d2==false )){
  
   
+   
    d2 = true;
    print ("true");
+   
+   
+   
 
+ 
+ } else if ((mouseX>DS_y2 && mouseX <DS_y2+DSw && mouseY>DSx && mouseY <DSx+DSh && d2==true )){
+   d2=false;
+   
  }
+ 
+
+
  // dice 3 state 
- if ((mouseX>DS_y3 && mouseX <DS_y3+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d3==false )){
  
   
+   
    d3 = true;
    print ("true");
+   
+   
+   
 
+ 
+ } else if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d3==true )){
+   d3=false;
+   
  }
+ 
+
  // dice 4 state 
- if ((mouseX>DS_y4 && mouseX <DS_y4+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d4==false )){
  
   
+   
    d4 = true;
    print ("true");
+   
+   
+   
 
+ 
+ } else if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d4==true )){
+   d4=false;
+   
  }
+ 
+
+
  // dice 5 state 
- if ((mouseX>DS_y5 && mouseX <DS_y5+DSw && mouseY>DSx && mouseY <DSx+DSh)){
+ if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d5==false )){
  
   
+   
    d5 = true;
    print ("true");
+   
+   
+   
 
+ 
+ } else if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d5==true )){
+   d5=false;
+   
  }
+ 
+
  
  
  }
