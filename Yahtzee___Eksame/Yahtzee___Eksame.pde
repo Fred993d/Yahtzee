@@ -534,7 +534,7 @@ rect(304,820,40,40);
    
  
  // dice 1 state 
- if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh )){
+ if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d1==false )){
  
   
    
@@ -545,6 +545,9 @@ rect(304,820,40,40);
    
 
  
+ } else if ((mouseX>DS_y1 && mouseX <DS_y1+DSw && mouseY>DSx && mouseY <DSx+DSh && d1==true )){
+   d1=false;
+   
  }
  
  
